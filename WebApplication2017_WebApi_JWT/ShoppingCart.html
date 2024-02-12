@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>購物車範例</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <script>
+    function addProductToCart() {
+        axios.post('/api/shoppingcart/AddProductToCart', {
+            ProductId: 1,
+            Name: "產品A",
+            Quantity: 2
+        })
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error));
+    }
+
+    function removeProductFromCart(productId) {
+        axios.delete(`/api/shoppingcart/RemoveProductFromCart/${productId}`)
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error));
+    }
+
+    function updateProductInCart() {
+        axios.put('/api/shoppingcart/UpdateProductInCart', {
+            ProductId: 1,
+            Quantity: 3
+        })
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error));
+    }
+
+    function getAllProductsInCart() {
+        axios.get('/api/shoppingcart/GetAllProductsInCart')
+        .then(response => console.log(response.data))
+        .catch(error => console.error(error));
+    }
+
+    // 示範呼叫
+    addProductToCart(); // 新增產品到購物車
+    // removeProductFromCart(1); // 從購物車中移除產品
+    // updateProductInCart(); // 更新購物車中的產品
+    // getAllProductsInCart(); // 取得購物車內容
+    </script>
+
+</body>
+</html>

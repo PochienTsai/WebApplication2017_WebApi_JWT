@@ -1,0 +1,26 @@
+Nuget 需安裝的套件
+1. Swagger-Net  //Swagger
+2. Microsoft.Owin.Security.Jwt：這個套件提供 JWT 的驗證和處理功能
+3. Microsoft.Owin.Security.OAuth：這個套件提供 OAuth 2.0 的驗證框架
+
+
+Swagger相關設定(設定Swagger為首頁)
+1. RouteConfig.cs中設定如下
+ //設定 Swagger 為預設頁面
+            routes.MapHttpRoute("swagger_root",
+                "",
+                null,
+                null,
+                new RedirectHandler(message => message.RequestUri.ToString(),
+                        "swagger"));
+
+2.專案屬性->建置(Build)頁面中的輸出:勾選XML文件檔案
+
+3. web api controller各個action設定如下的註解
+ /// <summary>
+        /// 由購物車移除商品
+        /// </summary>
+        /// <param name="productId"></param>
+        /// <response code="200">OK</response> 
+        /// <response code="404">Not found</response> 
+        /// <returns></returns>
