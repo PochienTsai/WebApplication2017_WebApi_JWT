@@ -1,4 +1,4 @@
-﻿using Swagger.Net.Application;
+﻿using Swashbuckle.Application;
 using System;
 using System.Collections.Generic;
 using System.Linq;

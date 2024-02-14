@@ -2,7 +2,10 @@ Nuget 需安裝的套件
 1. Swagger-Net  //Swagger
 2. Microsoft.Owin.Security.Jwt：這個套件提供 JWT 的驗證和處理功能
 3. Microsoft.Owin.Security.OAuth：這個套件提供 OAuth 2.0 的驗證框架
-
+Microsoft.Owin.Host.SystemWeb
+Microsoft.Owin.Cors
+Microsoft.Owin.Security.Jwt
+System.IdentityModel.Tokens.Jwt
 
 Swagger相關設定(設定Swagger為首頁)
 1. RouteConfig.cs中設定如下

@@ -1,0 +1,10 @@
+{
+  "user": {
+    "userId": 100,
+    "userName": "mis2000lab",
+    "userSex": null,
+    "userBirthDay": null,
+    "userMobilePhone": null
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Im1pczIwMDBsYWIiLCJyb2xlIjoiMTAwIiwibmJmIjoxNzA3NjY0NDIxLCJleHAiOjE3MDc2NjgwMjEsImlhdCI6MTcwNzY2NDQyMX0.Ng1xEiP36qBAhBtvukmrOSINvko8mQmt9H-PsHiJi78"
+}
